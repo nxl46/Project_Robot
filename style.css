@@ -1,0 +1,397 @@
+
+body{
+    background-image: url("https://img.freepik.com/premium-photo/photo-background-portrait-blue-color-paint-texture_41969-2628.jpg?w=360");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    font-family: 'Lucida Sans';
+    color: darkgoldenrod;
+  }
+
+  .head,
+  .left_arm,
+  .torso,
+  .right_arm,
+  .left_leg,
+  .right_leg {
+    background-color: rgb(218, 65, 65);
+
+  }
+
+  .antenna,
+  .ball{
+    background-color: black;
+  }
+
+
+  .antenna{
+    width: 15px;
+    height: 80px;
+    margin: 130px auto;
+    margin-top: 70px;
+    margin-bottom: -110px;
+    border-radius: 20px 20px 20px 20px;
+  }
+
+  .head {
+    width: 200px;
+    margin: 80px auto;
+    height: 180px;
+    border-radius: 50px 0px 20px 20px;
+    margin-bottom: 10px;
+  }
+  
+  .eyes {
+    position: relative;
+    top: 80px;
+  }
+  
+  .left_eye,
+  .right_eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: white;
+    display: inline-block;
+  }
+  
+  .left_eye {
+    margin-left: 50px;
+  }
+  
+  .right_eye {
+    margin-left: 50px;
+  }
+  
+  .upper_body {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .left_arm,
+  .right_arm {
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+
+  .left_arm {
+    margin-right: 10px;
+  }
+  
+  .right_arm {
+    margin-left: 10px;
+  }
+  
+  .torso {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 50px 50px;
+    transition: border-radius 1s;
+    z-index: 1;
+  }
+  
+  .lower_body {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .left_leg,
+  .right_leg {
+    width: 40px;
+    height: 180px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+  }
+  
+  .left_leg {
+    margin-left: 45px;
+  }
+  
+  .right_leg {
+    margin-left: 30px;
+  }
+  
+  .robots:hover .head {
+    animation: movehead 2s infinite;
+  }
+
+  .robots:hover .antenna {
+    border-radius: 40%;
+    animation: moveantenna 2s infinite;
+  }
+
+
+  .robots:hover .left_arm {
+    animation: moveleftarm 1.5s infinite;
+  }
+  
+  .robots:hover .right_arm {
+    animation: moverightarm 1.5s infinite;
+  }
+  
+  .robots:hover .left_leg {
+    animation: moveleftleg 3s infinite;
+  }
+  
+  .robots:hover .right_leg {
+    animation: moverightleg 3s infinite;
+
+  }
+
+  .robots:hover .torso {
+    animation: movetorso 2s infinite;
+    border-radius: 40%;
+  }
+
+  .robots:hover .eyes{
+    animation: moveeyes 2s infinite;
+  }
+
+  .robots:hover .left_eye{
+    animation: moveleft_eye 1s infinite;
+  }
+
+  .robots:hover .right_eye{
+    animation: moveright_eye 1s infinite;
+  }
+  
+  @keyframes movehead {
+    0% {
+        transform: rotate(0deg);
+      }
+    
+      25% {
+        transform: rotate(20deg);
+        border-radius: 70%;
+      }
+    
+      50% {
+        transform: rotate(0deg);
+      }
+    
+      75% {
+        border-radius: 20%;
+        transform: rotate(-20deg);
+      }
+    
+      100% {
+        transform: rotate(0deg);
+      }
+  }
+
+
+  @keyframes moveantenna {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+      }
+    
+      25% {
+        transform: rotate(30deg);
+        transform-origin: bottom center;
+      }
+    
+      50% {
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+      }
+    
+      75% {
+        transform: rotate(-30deg);
+        transform-origin: bottom center;
+      }
+    
+      100% {
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+      }
+  }
+
+  
+  @keyframes moveleftarm {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+      background-color: brown;
+    }
+  
+    50% {
+      transform: rotate(180deg);
+      transform-origin: top center;
+      background-color: rgb(192, 131, 131);
+    }
+  
+    75% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+      background-color: aqua;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+      background-color: brown;
+    }
+  }
+  
+  @keyframes moverightarm {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+      background-color: brown;
+    }
+  
+    50% {
+      transform: rotate(-180deg);
+      transform-origin: top center;
+      background-color: rgb(192, 131, 131);
+    }
+  
+    75% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+      background-color: aqua;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+      background-color: brown;
+    }
+  }
+  
+  @keyframes moveleftleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(20deg);
+      background-color: lightpink;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(20deg);
+      background-color: greenyellow;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moverightleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-20deg);
+      background-color: lightpink;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(-20deg);
+      background-color: greenyellow;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes movetorso {
+    0% {
+        transform: rotate(0deg);
+      }
+  
+      45% {
+          transform: rotate(180deg);
+          background-color: lightpink;
+        }
+      
+      80% {
+          transform: rotate(0deg);
+          background-color: yellowgreen;
+        }  
+  
+  
+      100% {
+        transform: rotate(360deg);
+      }
+  }
+
+
+  @keyframes moveeyes {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    45% {
+        transform: rotate(0deg);
+        background-color: lightpink;
+      }
+    
+    80% {
+        transform: rotate(0deg);
+        background-color: yellowgreen;
+      }  
+
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+  @keyframes moveleft_eye {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+      background-color:black;
+    }
+  }
+
+
+  @keyframes moveright_eye {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+      background-color: black;
+    }
+  }
+  
